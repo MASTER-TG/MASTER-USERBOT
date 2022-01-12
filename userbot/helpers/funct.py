@@ -178,10 +178,10 @@ async def make_gif(event, file):
             if response.text.startswith("Send me an animated sticker!"):
                 return "`This file is not supported`"
             response = response if response.media else await conv.get_response()
-            LEGENDresponse = response if response.media else await conv.get_response()
+            MASTERresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            LEGENDfile = await event.client.download_media(LEGENDresponse, "./temp")
-            return await unzip(LEGENDfile)
+            MASTERfile = await event.client.download_media(MASTERresponse, "./temp")
+            return await unzip(MASTERfile)
         except YouBlockedUserError:
             return "Unblock @tgstogifbot"
 
@@ -312,12 +312,12 @@ async def solarize(imagefile, endname):
 
 async def iphonex(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=iphonex&url={text}").json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.jpg", "jpeg")
     return "temp.jpg"
@@ -327,12 +327,12 @@ async def baguette(text):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=baguette&url={text}"
     ).json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    MASTER = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.jpg", "jpeg")
     return "temp.jpg"
@@ -340,12 +340,12 @@ async def baguette(text):
 
 async def threats(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=threats&url={text}").json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -355,12 +355,12 @@ async def threats(text):
 
 async def lolice(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=lolice&url={text}").json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -370,12 +370,12 @@ async def lolice(text):
 
 async def trash(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=trash&url={text}").json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -385,12 +385,12 @@ async def trash(text):
 
 async def awooify(text):
     r = requests.get(f"https://nekobot.xyz/api/imagegen?type=awooify&url={text}").json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -402,12 +402,12 @@ async def trap(text1, text2, text3):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=trap&name={text1}&author={text2}&image={text3}"
     ).json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
@@ -419,12 +419,12 @@ async def phcomment(text1, text2, text3):
     r = requests.get(
         f"https://nekobot.xyz/api/imagegen?type=phcomment&image={text1}&text={text2}&username={text3}"
     ).json()
-    legend = r.get("message")
-    LEGENDurl = url(legend)
-    if not LEGENDurl:
+    Master = r.get("message")
+    MASTERurl = url(Master)
+    if not MASTERurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(Master).content)
     img = Image.open("temp.png")
     if img.mode != "RGB":
         img = img.convert("RGB")
