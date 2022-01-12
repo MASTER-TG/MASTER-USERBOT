@@ -118,7 +118,7 @@ async def make_gif(event, file):
             response = response if response.media else await conv.get_response()
             legendresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            legendfile = await event.client.download_media(legendresponse, "./temp")
+            legendfile = await event.client.download_media(Masterresponse, "./temp")
             return await unzip(legendfile)
         except YouBlockedUserError:
             return "Unblock @tgstogifbot"
@@ -136,4 +136,4 @@ async def unsave_gif(event, hgif):
         LOGS.info(e)
 
 
-# legendbot
+# Masterbot
