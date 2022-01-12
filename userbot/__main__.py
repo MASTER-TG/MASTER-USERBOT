@@ -8,16 +8,16 @@ os.system("pip install telethon")
 import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 
-from userbot import LOGS, LEGENDversion, bot
+from userbot import LOGS, MASTERversion, bot
 from userbot.Config import Config
-from userbot.helpers.runner import reload_LEGENDBOT
+from userbot.helpers.runner import reload_MASTERBOT
 from userbot.start import abuses, addons, assistants, hekp, install, module, spams
 
 l1 = Config.COMMAND_HAND_LER
 l2 = Config.SUDO_COMMAND_HAND_LER
-LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
+MASTER_PIC = "https://te.legra.ph/file/e758b20be0b21e7090347.jpg"
 
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = " ▏Ｍ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃▕ "
 
 onbot = "start - Check if I am Alive \nhack - Hack Anyone Through String Session\nping - Pong! \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
 
@@ -36,7 +36,7 @@ async def add_bot(bot_token):
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
     except Exception as e:
-        print(f"LEGEND_STRING - {str(e)}")
+        print(f"MASTER_STRING - {str(e)}")
         sys.exit()
 
 
@@ -51,9 +51,9 @@ else:
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
             ).start(bot_token=Config.BOT_TOKEN)
             print("Checking Completed. Proceeding to next step...")
-            print("♥️ Starting LegendBot ♥️")
+            print("♥️ Starting MasterBot ♥️")
             bot.loop.run_until_complete(add_bot(Config.BOT_USERNAME))
-            LOGS.info("🥇🔥 LegendBot Startup Completed 🔥🥇")
+            LOGS.info("🥇🔥 MasterBot Startup Completed 🔥🥇")
         else:
             bot.start()
     except Exception as e:
@@ -66,12 +66,12 @@ tgbot = bot.tgbot
 
 
 async def killer():
-    LEGEND_USER = bot.me.first_name
-    The_LegendBoy = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
-    name = f"{legd_mention}'s Assistant"
+    MASTER_USER = bot.me.first_name
+    The_𝙋𝘼𝙎𝙄𝙔𝘼_𝘽𝙍𝙊.🇱🇰 = bot.uid
+    MSR_mention = f"[{MASTER_USER}](tg://user?id={The_𝙋𝘼𝙎𝙄𝙔𝘼_𝘽𝙍𝙊.🇱🇰})"
+    name = f"{MST_mention}'s Assistant"
     description = (
-        f"I am Assistant Of {legd_mention}.This Bot Can Help U To Chat With My Master"
+        f"I am Assistant Of {MSR_mention}.This Bot Can Help U To Chat With My Master"
     )
     starkbot = await tgbot.get_me()
     bot_id = starkbot.first_name
@@ -116,14 +116,14 @@ async def killer():
 
 
 async def legends():
-    LEGEND_USER = bot.me.first_name
-    The_LegendBoy = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
-    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
+    MASTER_USER = bot.me.first_name
+    The_𝙋𝘼𝙎𝙄𝙔𝘼_𝘽𝙍𝙊.🇱🇰 = bot.uid
+    MSR_mention = f"[{MASTER_USER}](tg://user?id={The_𝙋𝘼𝙎𝙄𝙔𝘼_𝘽𝙍𝙊.🇱🇰})"
+    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully MasterBot Has Been Deployed \nMy Master ~ 『{MSR_mention}』 \nVersion ~ {MASTERversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
         await tgbot.send_file(
-            bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY, incoming=True
+            bot.me.id, MASTER_PIC, caption=yescaption, buttons=TRY, incoming=True
         )
     except:
         pass
@@ -140,8 +140,8 @@ async def help(event):
             message=f"Hey Sir It's Me {bot_id}, Your Assistant! How Can I Help U?",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
-                    Button.url(" Updates ", "https://t.me/Official_LegendBot"),
+                    Button.url(" Support ", "https://t.me/Master_Userbot"),
+                    Button.url(" Updates ", "https://t.me/Official_MasterBot"),
                 ],
                 [
                     custom.Button.inline("Users", data="users"),
@@ -196,9 +196,9 @@ async def help(event):
 async def rel(event):
     if event.query.user_id == bot.uid:
         await event.answer(
-            "Reloading Lêɠêɳ̃dẞø†... Wait for few seconds...", cache_time=0, alert=True
+            "Reloading Ｍ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃... Wait for few seconds...", cache_time=0, alert=True
         )
-        await reload_LEGENDBOT()
+        await reload_MASTERBOT()
     else:
         await event.answer(
             "Sorry U Dont Have Access to Use this Button", cache_time=0, alert=True
@@ -245,7 +245,7 @@ async def users(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : LegendBot Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
+            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : MasterBot Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
             buttons=[
                 [custom.Button.inline("Back", data="osg")],
             ],
@@ -353,18 +353,18 @@ bot.loop.run_until_complete(install())
 
 print(
     f"""
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
+╔════❰MASTERBOT❱═❍⊱❁۪۪
 ║┣⪼ OWNER - {Config.ALIVE_NAME}
-║┣⪼ Group - @Legend_Userbot
-║┣⪼ CREATOR - @The_LegendBoy
-║┣⪼ LEGENDBOT - {LEGENDversion}
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║┣⪼ Group - @Master_Userbot
+║┣⪼ CREATOR - @@Wuzzup_Girl
+║┣⪼ MASTERBOT - {MASTERversion}
+║┣⪼ ✨ 『🔱 M A S T E R 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱"""
 )
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
-bot.loop.run_until_complete(legends())
+bot.loop.run_until_complete(Masters())
 
 
 if len(sys.argv) not in (1, 3, 4):
