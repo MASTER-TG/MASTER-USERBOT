@@ -318,6 +318,6 @@ async def draw_meme(image_path, text):
             )
             current_h += u_height + pad
 
-    lumd = "legend.png"
+    lumd = "Master.png"
     img.save(lumd, "png")
     return lumd
