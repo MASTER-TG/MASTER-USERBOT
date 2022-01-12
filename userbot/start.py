@@ -4,7 +4,7 @@ from pathlib import Path
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import InputMessagesFilterDocument
 
-from userbot import LEGENDversion, bot
+from userbot import MASTERversion, bot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -16,10 +16,10 @@ from userbot.utils import (
 
 os.system("pip install telethon==1.24.0")
 l2 = Config.SUDO_COMMAND_HAND_LER
-LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
+MASTER_PIC = "https://te.legra.ph/file/e758b20be0b21e7090347.jpg"
 l1 = Config.COMMAND_HAND_LER
 
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = "[ Ｍ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃 ]"
 
 onbot = "start - Check if I am Alive \nhack - Hack Anyone Through String Session\nping - Pong! \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
 
@@ -37,24 +37,24 @@ plc = os.environ.get("PLUGIN", None)
 async def hekp():
     try:
         os.environ[
-            "LEGEND_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
+            "MASTER_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By MasterBot"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
-                caption=f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+                caption=f"Deployed Ｍ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃 Successfully\n\nＭ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃 ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
     except Exception as e:
         print(str(e))
 
     try:
-        await bot(JoinChannelRequest("@Official_LegendBot"))
+        await bot(JoinChannelRequest("@Official_MasterBot"))
     except BaseException:
         pass
 
     try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
+        await bot(JoinChannelRequest("@Master_Userbot"))
     except BaseException:
         pass
 
@@ -152,7 +152,7 @@ async def spams():
 async def install():
     if plc == "ON":
         try:
-            await bot(JoinChannelRequest("@Legend_UserBotPlugin"))
+            await bot(JoinChannelRequest("@Master_UserBotPlugin"))
         except BaseException:
             pass
         i = 0
