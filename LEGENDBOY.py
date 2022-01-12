@@ -47,8 +47,8 @@ Your heroku bot username is {self.heroku_username}"""
 
 
 if Config.LEGEND_STRING:
-    session_name = str(Config.LEGEND_STRING)
-    sweetie = LegendBoy(session_name, Config.APP_ID, Config.API_HASH)
+    session_name = str(Config.MASTER_STRING)
+    sweetie = 𝙋𝘼𝙎𝙄𝙔𝘼_𝘽𝙍𝙊.🇱🇰(session_name, Config.APP_ID, Config.API_HASH)
 else:
     session_name = "startup"
     bbbot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
