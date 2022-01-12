@@ -30,6 +30,6 @@ jobs:
           commit_message: 'auto fixes'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: LEGEND-OS
-          commit_user_email: Krishna045Jaiswal@gmail.com 
-          commit_author: LEGEND-OS <Krishna045Jaiswal@gmail.com>
+          commit_user_name: MASTER-TG
+          commit_user_email: master.pasiya.os@gmail.com 
+          commit_author: MASTER-TG <master.pasiya.os@gmail.com>
