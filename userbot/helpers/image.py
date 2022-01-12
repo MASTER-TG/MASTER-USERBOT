@@ -112,4 +112,4 @@ async def dotify(image, pix, mode):
     return out
 
 
-# LEGENDBOT
+# MASTERBOT
