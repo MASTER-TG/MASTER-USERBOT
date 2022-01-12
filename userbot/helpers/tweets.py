@@ -185,4 +185,4 @@ async def tweets(text1, text2):
     return "temp.jpg"
 
 
-# legendbot
+# Masterbot
