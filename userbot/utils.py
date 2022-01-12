@@ -142,7 +142,7 @@ def load_addons(shortname):
         import userbot.utils
 
         path = Path(f"userbot/plugins/Xtra_Plugin/{shortname}.py")
-        name = "userbot.plugins.LegendBot-Addons.{}".format(shortname)
+        name = "userbot.plugins.MasterBot-Addons.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -170,7 +170,7 @@ def load_addons(shortname):
         mod.Var = Var
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_MASTER
+        mod.delete_MASTERD = delete_MASTER
         mod.eod = delete_MASTER
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
