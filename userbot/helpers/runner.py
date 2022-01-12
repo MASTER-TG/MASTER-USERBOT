@@ -42,4 +42,4 @@ async def reload_LEGENDBOT():
     os._exit(143)
 
 
-# legendbot
+# Masterbot
