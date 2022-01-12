@@ -84,4 +84,4 @@ async def get_time(seconds: int) -> str:
 
 StartTime = time.time()
 
-# legendbot
+# Masterbot
