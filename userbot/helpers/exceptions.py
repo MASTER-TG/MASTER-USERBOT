@@ -86,4 +86,4 @@ async def progress(
             oldtmp = tmp
 
 
-# legendbot
+# Masterbot
