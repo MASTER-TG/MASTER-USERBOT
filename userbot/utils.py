@@ -41,7 +41,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("Lêɠêɳ̃dẞø† ~ " + shortname)
+        LOGS.info("Ｍ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃 ~ " + shortname)
     else:
         import userbot.utils
 
@@ -49,12 +49,12 @@ def load_module(shortname):
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
+        mod.bot = Master
         mod.borg = bot
-        # mod.LEGENDBOT = Legend
-        mod.LegendBot = LegendBot
-        mod.tbot = LegendBot
-        mod.Legend = Legend
+        # mod.MASTERBOT = Master
+        mod.MasterBot = MasterBot
+        mod.tbot = MasterBot
+        mod.mASTER = Master
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -63,20 +63,20 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_MASTER = delete_LEGEND
+        mod.eod = delete_MASTER
         mod.admin_cmd = admin_cmd
         mod.legend_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT"] = userbot
+        # support for MASTERBOT originals
+        sys.modules["MASTERBOT.utils"] = userbot.utils
+        sys.modules["MASTERBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("🔥⚡Lêɠêɳ̃dẞø†⚡🔥 ~ " + shortname)
+        LOGS.info("🔥⚡Ｍ𝚊̃𝚜𝚝𝚎̐𝚛⚝𝙱𝚘̃𝚃⚡🔥 ~ " + shortname)
 
 
 def start_assistant(shortname):
@@ -158,34 +158,34 @@ def load_addons(shortname):
         name = "userbot.plugins.Xtra_Plugin.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.Legend = Legend
-        mod.bot = Legend
+        mod.Master = Master
+        mod.bot = Master
         mod.bot = bot
         mod.borg = bot
-        mod.LEGENDBOT = bot
-        mod.LegendBot = LegendBot
-        mod.tbot = LegendBot
-        mod.Legend = Legend
+        mod.MASTERBOT = bot
+        mod.MasterBot = MasterBot
+        mod.tbot = MasterBot
+        mod.Master = Master
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_LEGEND = delete_MASTER
+        mod.eod = delete_MASTER
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        # support for MASTERBOT originals
+        sys.modules["MASTERBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["LegendBot-Addons." + shortname] = mod
+        sys.modules["MasterBot-Addons." + shortname] = mod
         LOGS.info("📍Extra Plugin📍 ~ " + shortname)
 
 
@@ -204,7 +204,7 @@ def load_abuse(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("LegendBot-Abuse ~ " + shortname)
+        LOGS.info("MassterBot-Abuse ~ " + shortname)
     else:
         import importlib
         import sys
@@ -216,10 +216,10 @@ def load_abuse(shortname):
         name = "userbot/plugins/Abuse.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
-        mod.LegendBot = LegendBot
-        mod.tbot = LegendBot
-        mod.Legend = Legend
+        mod.bot = Master
+        mod.MasterBot = MasterBot
+        mod.tbot = MasterBot
+        mod.Master = Master
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -228,21 +228,21 @@ def load_abuse(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.LEGENDBOT = bot
+        mod.MASTERBOT = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_LEGEND = delete_MASTER
+        mod.eod = delete_MASTER
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        # support for MASTERBOT originals
+        sys.modules["MASTERBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["ABUSE." + shortname] = mod
-        LOGS.info("🔱LegendBot-Abuse🔱 ~ " + shortname)
+        LOGS.info("🔱MasterBot-Abuse🔱 ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
@@ -302,10 +302,10 @@ def admin_cmd(pattern=None, command=None, **args):
                 CMD_LIST.update({file_test: [cmd]})
         else:
             if len(Config.COMMAND_HAND_LER) == 2:
-                LEGENDreg = "^" + Config.COMMAND_HAND_LER
+                MASTERreg = "^" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER[1]
             elif len(Config.COMMAND_HAND_LER) == 1:
-                LEGENDreg = "^\\" + Config.COMMAND_HAND_LER
+                MASTERreg = "^\\" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
             args["pattern"] = re.compile(LEGENDreg + pattern)
             if command is not None:
@@ -625,7 +625,7 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
-    return await LEGENDevent.delete()
+    return await MASTERevent.delete()
 
 
 def on(**args):
