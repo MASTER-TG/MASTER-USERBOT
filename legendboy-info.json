@@ -1,9 +1,9 @@
 {
-    "LEGENDBOT-INFO": {
+    "MASTERBOT-INFO": {
         "version": "3.0",
-        "release-date": "16 December 2021",
+        "release-date": "1 February 2022",
         "branch": "master",
-        "author": "LEGEND-OS",
-        "author-url": "https://github.com/LEGEND-OS"
+        "author": "MASTER-TG",
+        "author-url": "https://github.com/MASTERBOT"
     }
 }
