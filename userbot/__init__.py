@@ -11,18 +11,18 @@ from var import Var
 
 BOTLOG = True
 StartTime = time.time()
-LEGENDversion = "𝚅3.0"
+MASTERversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 
-if Config.LEGEND_STRING:
-    session = StringSession(str(Config.LEGEND_STRING))
+if Config.MASTER_STRING:
+    session = StringSession(str(Config.MASTER_STRING))
 else:
-    session = "legendbot"
+    session = "Masterbot"
 
 
 try:
-    Legend = TelegramClient(
+    Master = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -31,12 +31,12 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"LEGEND_STRING - {e}")
+    print(f"MASTER_STRING - {e}")
     sys.exit()
 
 
-LegendBot = TelegramClient(
-    session="Legend-Bot",
+MasterBot = TelegramClient(
+    session="Master-Bot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
@@ -45,8 +45,8 @@ LegendBot = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = Legend
-tbot = LegendBot
+bot = kbot = Master
+tbot = MasterBot
 
 
 DEVS = ["1511485540"]
